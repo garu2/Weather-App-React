@@ -1,12 +1,12 @@
 import React from 'react';
-import Peru from "../images/peru.png"
-import Colombia from "../images/colombia.png"
-import Espania from "../images/espania.png"
-import Bolivia from "../images/bolivia.png"
-import Argentina from "../images/argentina.png"
-import Mexico from "../images/mexico.png"
-import Venezuela from "../images/venezuela.png"
-import Ecuador from "../images/ecuador.png"
+import Peru from "../../images/peru.png"
+import Colombia from "../../images/colombia.png"
+import Espania from "../../images/espania.png"
+import Bolivia from "../../images/bolivia.png"
+import Argentina from "../../images/argentina.png"
+import Mexico from "../../images/mexico.png"
+import Venezuela from "../../images/venezuela.png"
+import Ecuador from "../../images/ecuador.png"
 
 const Cities = ({ getWeather }) => { 
 
