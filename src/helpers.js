@@ -7,19 +7,14 @@ const FETCH_OPTIONS = {
 };
 
 export async function get(city) {
-	let newCity;
-	if (city === "" || city === undefined) {
-		const localy = await fetch("http://www.geoplugin.net/json.gp");
-		const localyJson = await localy.json();
-		newCity =  localyJson.geoplugin_city;
-	} else {
-		newCity = city;
+	if (city === "") {
+		const body = {};
+		return {
+			status: 400,
+			body
+		}
 	}
-
-	const response = await fetch(
-		`https://weatherapi-com.p.rapidapi.com/current.json?q=${newCity}`,
-		FETCH_OPTIONS
-		);
+	const response = await fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`, FETCH_OPTIONS);
 
 	const data = await response.json();
 
@@ -41,7 +36,7 @@ export async function get(city) {
 		windSpeed: wind_kph,
 		windDir: wind_dir
 	};
-
+	
 	return {
 		status: 200,
 		body

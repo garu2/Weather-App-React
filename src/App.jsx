@@ -5,18 +5,31 @@ import Header from './components/Header';
 import Content from './components/Content';
 import Cities from './components/Cities';
 
-function App() {
+function App() { 
   const [data, setData] = useState({});
+  const [location, setLocation] = useState("");
 
     const getWeather = (nameCity = "") => {
-        get(nameCity)
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition( position => {
+                setLocation(`${position.coords.latitude},${position.coords.longitude}`);
+            })
+        } else {
+            alert("non enteeerrrr");
+        }
+        let param = nameCity==="" ? location : nameCity; 
+        get(param)
             .then(respuesta => respuesta)
-            .then(res => setData(res))
+            .then(res => {
+                if (res.status != 400) {
+                    setData(res);
+                }
+            })
     }
 
     useEffect(() => {
         getWeather();
-    }, [])
+    }, [location])
 
   const isEmpty = Object.keys(data).length === 0;
   return (
