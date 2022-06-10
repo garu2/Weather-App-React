@@ -14,7 +14,7 @@ const Cities = ({ getWeather }) => {
                 flags.map((item, index) => (
                     <li key={index}>
                         <button onClick={createHandleClick(item)} >
-                            <img src={`${window.location.origin}/images/${item}.png`} alt={item} />            
+                            <img src={`/images/${item}.png`} alt={item} />            
                         </button>
                     </li>
                 ))
