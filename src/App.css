@@ -113,13 +113,21 @@ section.header {
     margin-bottom: 12px;
 }
 .cities ul li img {
-    width: 80px;
-    height: 50px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 18px;
+    border-radius: 10px;
 }
-.cities ul li img:hover,
-.cities ul li img:focus {
+.cities ul li button {
+    border-radius: 13px;
+    height: 50px;
+    width: 80px;
+    outline: none;
+    padding: 0px;
+    border: solid 2px #1e95c0;
+}
+.cities ul li button:hover,
+.cities ul li button:focus {
     box-shadow: rgb(255 255 255 / 37%) 0px 8px 24px;
     border: solid 2px #fff;
 }
