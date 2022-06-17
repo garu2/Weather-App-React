@@ -15,6 +15,7 @@ const Cities = ({ getWeather }) => {
     const createHandleClick = (city) => () => {
         getWeather(city);
     }
+    console.log('test repo');
 
     return ( 
         <section className="cities">
