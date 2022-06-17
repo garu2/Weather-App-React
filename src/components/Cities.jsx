@@ -1,5 +1,5 @@
-import lima from '/lima.png';
-import bogota from '/bogota.png';
+import Lima from '/lima.png';
+import Bogota from '/bogota.png';
 /* import lima from '/lima.png';
 import bogota from '/bogota.png';
 import lima from '/lima.png';
@@ -10,7 +10,7 @@ import bogota from '/bogota.png'; */
 const Cities = ({ getWeather }) => { 
 
     const cites = ['lima', 'bogota','madrid','la paz','buenos aires','quito','caracas','monterrey'];
-    const flags = [lima, bogota,lima, bogota,lima, bogota,lima, bogota];
+    const flags = [Lima, Bogota,Lima, Bogota,Lima, Bogota,Lima, Bogota];
 
     const createHandleClick = (city) => () => {
         getWeather(city);
