@@ -1,5 +1,5 @@
-import Lima from "/lima.png";
-import Bogota from "/bogota.png";
+import Lima from "/lima.PNG";
+import Bogota from "/bogota.PNG";
 /* import lima from '/lima.png';
 import bogota from '/bogota.png';
 import lima from '/lima.png';
