@@ -1,6 +1,16 @@
+import lima from '/lima.png';
+import bogota from '/bogota.png';
+/* import lima from '/lima.png';
+import bogota from '/bogota.png';
+import lima from '/lima.png';
+import bogota from '/bogota.png';
+import lima from '/lima.png';
+import bogota from '/bogota.png'; */
+
 const Cities = ({ getWeather }) => { 
 
-    const flags = ['lima', 'bogota','madrid','la paz','buenos aires','quito','caracas','monterrey'];
+    const cites = ['lima', 'bogota','madrid','la paz','buenos aires','quito','caracas','monterrey'];
+    const flags = [lima, bogota,lima, bogota,lima, bogota,lima, bogota];
 
     const createHandleClick = (city) => () => {
         getWeather(city);
@@ -11,10 +21,11 @@ const Cities = ({ getWeather }) => {
             <h2>Other Cities</h2>
             <ul>
                 {
-                flags.map((item, index) => (
+                cites.map((item, index) => (
                     <li key={index}>
                         <button onClick={createHandleClick(item)} >
-                            <img src={`/${item}.png`} alt={item} />            
+                            <img src={flags[index]} alt={item} /> 
+                            {/* <img src={`/${item}.png`} alt={item} />   */}          
                         </button>
                     </li>
                 ))
