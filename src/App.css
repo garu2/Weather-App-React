@@ -29,7 +29,8 @@ section.header {
 }
 .header .location h4:before {
     content: '';
-    background: url(https://i.ibb.co/jhVMdW5/icon-Location.png);
+    /*background: url(https://i.ibb.co/jhVMdW5/icon-Location.png);*/
+    background: url(/images/iconLocation.png);
     background-size: 15px 17px;
     width: 15px;
     height: 17px;
